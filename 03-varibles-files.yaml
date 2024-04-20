@@ -1,7 +1,7 @@
 - name: printed varibles from files level
   hosts: mongodb
   vars_files:
-   varibles.yaml
+   varibles.yaml:
   tasks:
   - name: printed varibles from files level
     ansible.builtin.debug:
