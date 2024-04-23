@@ -1,0 +1,9 @@
+- name: create user
+  hosts: mongodb
+  vars:
+   NAME: swamy
+  tasks:
+  - name: printed username
+    ansible.builtin.debug:
+     msg: "name is {{NAME}}"
+    when NAME: swamy
