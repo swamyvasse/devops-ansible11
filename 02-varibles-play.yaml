@@ -1,0 +1,11 @@
+- name: printed varibles from play level
+  hosts: mongodb
+  vars:
+   COURSE: devops
+   TRAINER: swamy
+   DURATION: 10hrs
+  tasks:
+  - name: printed varibles from play level
+    ansible.builtin.debug:
+     msg: "i am learning course is {{COURSE}} and tariner is {{TRAINER}} duration is {{DURATION}}"
+  
