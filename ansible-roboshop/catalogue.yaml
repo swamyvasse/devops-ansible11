@@ -33,6 +33,6 @@
   - when: directory.stat.exists == False
     name: create directory /app
     ansible.builtin.file:
-       path: /app
-       state: diretory
+      path: /app
+      state: directory
   
