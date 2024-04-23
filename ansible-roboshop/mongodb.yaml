@@ -12,5 +12,6 @@
      state: installed
   - name: start service
     ansible.builtin.service:
+    become: yes
      name: systemctl start
      state: started
