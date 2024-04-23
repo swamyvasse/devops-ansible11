@@ -1,0 +1,11 @@
+- name: install and uninstall packages
+  hosts: mongodb
+  become: yes
+  tasks:
+  - name: install and uninstall packages
+    ansible.builtin.yum:
+     name: "{{item.name}}"
+     state: "{{item.state}}"
+    loop:
+    - {name: 'nginx', state: 'absent'}
+    - {name: 'git', state: 'installed'}
