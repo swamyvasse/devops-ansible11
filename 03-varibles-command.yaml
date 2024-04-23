@@ -1,0 +1,6 @@
+- name: printed varibles from command level
+  hosts: mongodb
+  tasks:
+  - name: printed varibles from command level
+    ansible.builtin.debug:
+     msg: "i am learning course is {{COURSE}}"
