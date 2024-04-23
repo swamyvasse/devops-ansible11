@@ -4,9 +4,8 @@
   tasks:
   - name: install packages
     ansible.builtin.yum:
-     name: packages
+     name: nginx
      state: installed
     loop:
     - nginx
-    - mailx
-    - postfix
+    
