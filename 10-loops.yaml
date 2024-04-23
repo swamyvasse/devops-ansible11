@@ -1,4 +1,4 @@
-- name: loops in ansible
+- name: printed loops in ansible
   hosts: localhost
   tasks:
   - name: printed loops in ansible
