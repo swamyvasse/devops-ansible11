@@ -2,6 +2,11 @@
   hosts: mongodb
   become: yes
   tasks:
+  - name: copy files from mongodbrepo to mongodb
+    ansible.builtin.copy:
+     src: mongodb.repo
+     dest: /etc/yum.repos.d/mongo.repo
   - name: install mongodb
     ansible.builtin.yum:
-     name: 
+     name: mongodb-org
+     state: installed
