@@ -6,7 +6,7 @@
     ansible.builtin.copy:
      src: mongodb.repo
      dest: /etc/yum.repos.d/mongo.repo
-  - name: install mongodb-org-4.2
+  - name: install MongoDB packages
     ansible.builtin.yum:
-     name: mongodb-org-4.2
+     name: mongodb-org
      state: installed
