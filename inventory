@@ -1,3 +1,7 @@
 [mongodb]
 
 roboshop-us-dev-mongodb-01.swamy.cloud
+
+[mongodb:vars]
+MONGO_USER=mondbadmin
+MONGO_DB=categories
