@@ -15,11 +15,11 @@
      name: mongod
      state: started
      enabled: yes
-  - name: replace old hostname with new hostname
+  - name: enable remote connections to mongodb
     ansible.builtin.replace:
-    path: /etc/mongod.conf
-    regexp: '127.0.0.1'
-    replace: '0.0.0.0'
+     path: /etc/mongod.conf
+     regexp: '127.0.0.1'
+     replace: '0.0.0.0'
   - name: restart mongodb
     ansible.builtin.service:
      name: mongod
